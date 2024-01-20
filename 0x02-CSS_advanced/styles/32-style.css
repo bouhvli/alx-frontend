@@ -486,7 +486,7 @@ ul.row {
   font-size: 10rem;
   z-index: -1;
 }
-.card-work:hover img{
+.card-work:hover .card-image{
   transform: scale(1.2);
   transition: var(--transition-duration) var(--transition-cubic-bezier);
 }
