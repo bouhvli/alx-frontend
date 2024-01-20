@@ -204,7 +204,6 @@ template{
 
   --transition-duration: .3s;
   --transition-cubic-bezier: cubic-bezier(0.17, 0.67, 0, 1.01);
-
 }
 *, *::before, *::after{
   box-sizing: border-box;
@@ -378,7 +377,7 @@ ul.row {
   text-decoration: var(--button-hover-text-decoration);
   background-color: var(--button-hover-background);
   transition-duration: var(--transition-duration);
-  transition-property: var(--transition-cubic-bezier);
+  transition-property: var(--transition-duration) var(--transition-cubic-bezier);
 }
 .card-testimonial{
   text-align: center;
@@ -451,6 +450,14 @@ ul.row {
 .card-work:hover .card-inner{
   background-color: rgba(0, 0, 0, 0.7);
 }
+.card-work:hover .card-image{
+  transform: scale(1.2);
+  transition: var(--transition-duration) var(--transition-cubic-bezier);
+}
+.card-work .card-outer{
+  transform: scale(0.95);
+  transition: var(--transition-duration) var(--transition-cubic-bezier);
+}
 .card-work .card-title{
   text-align: center;
   margin: 0;
@@ -485,12 +492,4 @@ ul.row {
   color: #efeded;
   font-size: 10rem;
   z-index: -1;
-}
-.card-work:hover .card-image{
-  transform: scale(1.2);
-  transition: var(--transition-duration) var(--transition-cubic-bezier);
-}
-.card-work:hover .card-outer{
-  transform: scale(0.95);
-  transition: var(--transition-duration) var(--transition-cubic-bezier);
 }
